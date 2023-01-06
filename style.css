@@ -46,13 +46,9 @@ body{
     width: 100%;
     position: absolute;
 }
-.imagenes .cubo{
-    width: 90px;
-    height: 90px;
-    z-index: 10;
-    bottom: -9.7rem;
-    left: -0.1rem;
-}
+.cubo{
+    display: none;
+ }
 .imagenes .woman{
     z-index: 5;
 }
@@ -72,6 +68,10 @@ body{
     color: var(--colro4);
     justify-content: space-between;
     margin:1rem 0;
+    cursor: pointer;
+}
+.titulo_articulo:hover{
+    color: var(--colro2);
 }
 article p{
     display: none;
@@ -107,33 +107,51 @@ article p{
 
 @media screen and (min-width: 500px) {
     .imagenes{
-        width: 45%;
         position: absolute; 
+        width: 38%;
+        top: -10rem;
+        min-width: 350px;
     }
-    .cubo{
-        display: none;
-     }
      .imagenes .sombra_img {
-        top: -2rem;
+        top: 9rem;
     }
     .cuerpo_articulos{
         width: 85%;
     }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
     .contenedor{
         justify-content: end;
         align-items: center;
         width: 60%;
         padding-bottom: 0;
+        overflow: hidden;
     }
     .imagenes{
         width: 40%;
-        left: -6rem;
+        left: -4rem;
         padding: 11rem 0;
     }
+    .cubo{
+        display: block;
+        width: 10%;
+        height: 13%;
+        z-index: 10;
+        bottom: -3.7rem;
+        left: 4.5rem;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    .cubo:hover{
+        transform:scale(1.2);
+        transition: transform 0.3s;
+    }
     .imagenes .sombra_img{
-        top: 10rem;
+        top: 1rem;
+        width: 159%;
+        left: -13rem;
+
     }
     .cuerpo_articulos{
         padding-bottom: 3rem;
